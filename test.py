@@ -1,7 +1,10 @@
 import osmnx as ox
+from osgeo import gdal
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import shapely
+import os
+print(gdal.GetDriverCount())
 
 study_point = shapely.Point(-9.1393, 38.7223)  # Latitude and Longitude for Lisbon
 study_geom = gpd.GeoSeries([study_point], crs=4326)
